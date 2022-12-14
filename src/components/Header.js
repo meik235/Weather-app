@@ -3,7 +3,7 @@ import AddCityModal from "./AddCityModal";
 import "./Header.css";
 
 const Header = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const addCity = () => {
     !visible ? setVisible(true) : setVisible(false);
   };

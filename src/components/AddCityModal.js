@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import ClearIcon from "@material-ui/icons/Clear";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import axios from "axios";
+import AlertMessage from "./AlertMessage";
 import "./AddCityModal.css";
 
 const AddCityModal = ({ closeHandler }) => {
   const [cities, setCities] = useState([]);
   const [search, setSearch] = useState("");
+  const [alertVisible, setAlertVisible] = useState(false);
 
   useEffect(() => {
     onload();
@@ -38,7 +40,8 @@ const AddCityModal = ({ closeHandler }) => {
         isMyCity: true,
       })
       .then(() => {
-        alert("City Added");
+        setAlertVisible(true);
+        setTimeout(() => setAlertVisible(false), 1000);
         onload();
       })
       .catch((error) => console.log(error));
@@ -77,6 +80,7 @@ const AddCityModal = ({ closeHandler }) => {
           </div>
         </div>
       </div>
+      {alertVisible && <AlertMessage text="City Added" />}
     </div>
   );
 };

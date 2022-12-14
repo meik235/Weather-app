@@ -26,9 +26,9 @@
       "desc": "Clear with periodic clouds",
       "temp": "20 °C",
       "humidity": "52.0%",
-      "isVisible": true,
+      "isVisible": false,
       "isFavorite": false,
-      "isMyCity": false
+      "isMyCity": true
     },
     {
       "id": "4",
@@ -36,9 +36,9 @@
       "desc": "Clear with periodic clouds",
       "temp": "20 °C",
       "humidity": "52.0%",
-      "isVisible": true,
+      "isVisible": false,
       "isFavorite": false,
-      "isMyCity": false
+      "isMyCity": true
     },
     {
       "id": "5",
@@ -46,9 +46,9 @@
       "desc": "Clear with periodic clouds",
       "temp": "20 °C",
       "humidity": "52.0%",
-      "isVisible": true,
+      "isVisible": false,
       "isFavorite": false,
-      "isMyCity": false
+      "isMyCity": true
     },
     {
       "id": "6",

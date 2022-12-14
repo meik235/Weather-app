@@ -1,0 +1,26 @@
+.audun_success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7ddf7c;
+  background-color: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  border-radius: 0.3em;
+  padding: 10px;
+  width: 150px;
+  position: relative;
+  top: 0%;
+  left: 43%;
+  float: left;
+  animation-duration: 1s;
+  animation-name: slidein-low;
+}
+
+@keyframes slidein-low {
+  from {
+    top: 0;
+  }
+  to {
+    top: 5%;
+  }
+}
