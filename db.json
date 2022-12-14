@@ -34,7 +34,7 @@
       "temp": "20 °C",
       "humidity": "52.0%",
       "isFavorite": false,
-      "isMyCity": true
+      "isMyCity": false
     },
     {
       "id": "5",

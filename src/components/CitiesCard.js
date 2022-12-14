@@ -11,9 +11,9 @@ const CitiesCard = ({ id }) => {
     onload(id);
   }, [id]);
 
-  const onload = (idonload) => {
+  const onload = (id) => {
     axios
-      .get(`http://localhost:3003/cities-data/${idonload}`)
+      .get(`http://localhost:3003/cities-data/${id}`)
       .then((response) => {
         setCityInfo(response.data);
       })
@@ -33,7 +33,7 @@ const CitiesCard = ({ id }) => {
       : await axios.patch(`http://localhost:3003/cities-data/${citydata.id}`, {
           isFavorite: false,
         });
-    onload();
+    onload(id);
   };
 
   return (

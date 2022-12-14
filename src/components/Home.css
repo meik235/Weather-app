@@ -1,6 +1,7 @@
 .home {
   display: flex;
   flex-direction: column;
+  width: 200vh;
 }
 
 .home > p {
@@ -10,8 +11,9 @@
 }
 
 .home__container {
-  display: flex;
-  margin-left: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 3rem;
 }
 
 .favorite__city__container {
