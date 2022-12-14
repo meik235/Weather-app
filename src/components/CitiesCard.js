@@ -20,17 +20,17 @@ const CitiesCard = ({ id }) => {
       .catch((error) => console.log(error));
   };
 
-  const addFavoriteHandler = async (id) => {
+  const addFavoriteHandler = async (data) => {
     isFavorite ? setIsFavorite(true) : setIsFavorite(false);
-    await favoriteHandler(id);
+    await favoriteHandler(data);
   };
 
-  const favoriteHandler = async (dataId) => {
-    !isFavorite
-      ? await axios.patch(`http://localhost:3003/cities-data/${dataId}`, {
+  const favoriteHandler = async (citydata) => {
+    !citydata.isFavorite
+      ? await axios.patch(`http://localhost:3003/cities-data/${citydata.id}`, {
           isFavorite: true,
         })
-      : await axios.patch(`http://localhost:3003/cities-data/${dataId}`, {
+      : await axios.patch(`http://localhost:3003/cities-data/${citydata.id}`, {
           isFavorite: false,
         });
     onload();
@@ -46,7 +46,7 @@ const CitiesCard = ({ id }) => {
         <h3>{cityInfo.name}</h3>
         <StarIcon
           className="cities__btn"
-          onClick={() => addFavoriteHandler(cityInfo.id)}
+          onClick={() => addFavoriteHandler(cityInfo)}
         />
       </div>
       <hr />

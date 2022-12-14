@@ -31,7 +31,10 @@ const Cities = () => {
     setCityId(id);
   };
 
-  const addNewCity = () => {};
+  const addNewCity = () => {
+    onload();
+  };
+
   return (
     <div className="container">
       <div className="cities">

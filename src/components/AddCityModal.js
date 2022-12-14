@@ -5,7 +5,7 @@ import axios from "axios";
 import AlertMessage from "./AlertMessage";
 import "./AddCityModal.css";
 
-const AddCityModal = ({ closeHandler }) => {
+const AddCityModal = ({ closeHandler, addNewCity }) => {
   const [cities, setCities] = useState([]);
   const [search, setSearch] = useState("");
   const [alertVisible, setAlertVisible] = useState(false);
@@ -36,12 +36,12 @@ const AddCityModal = ({ closeHandler }) => {
   const cityDetailsHandler = async (city) => {
     axios
       .patch(`http://localhost:3003/cities-data/${city.id}`, {
-        isVisible: false,
         isMyCity: true,
       })
       .then(() => {
         setAlertVisible(true);
         setTimeout(() => setAlertVisible(false), 1000);
+        addNewCity();
         onload();
       })
       .catch((error) => console.log(error));
@@ -67,8 +67,8 @@ const AddCityModal = ({ closeHandler }) => {
                 className="modalContent"
                 key={city.id}
                 style={{
-                  visibility: city.isVisible ? "visible" : "hidden",
-                  display: city.isVisible ? "" : "none",
+                  visibility: !city.isMyCity ? "visible" : "hidden",
+                  display: !city.isMyCity ? "" : "none",
                 }}
               >
                 <h3>{city.name}</h3>
