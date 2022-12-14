@@ -25,7 +25,7 @@
       "temp": "20 °C",
       "humidity": "52.0%",
       "isVisible": false,
-      "isFavorite": false
+      "isFavorite": true
     },
     {
       "id": "4",
@@ -42,8 +42,8 @@
       "desc": "Clear with periodic clouds",
       "temp": "20 °C",
       "humidity": "52.0%",
-      "isVisible": true,
-      "isFavorite": false
+      "isVisible": false,
+      "isFavorite": true
     },
     {
       "id": "6",
@@ -140,6 +140,15 @@
     {
       "id": "4",
       "name": "Patna",
+      "desc": "Clear with periodic clouds",
+      "temp": "20 °C",
+      "humidity": "52.0%",
+      "isVisible": true,
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "name": "Delhi",
       "desc": "Clear with periodic clouds",
       "temp": "20 °C",
       "humidity": "52.0%",
