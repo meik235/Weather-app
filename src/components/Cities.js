@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import AddCityModal from "./AddCityModal";
-import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import axios from "axios";
+import AddCityModal from "./AddCityModal";
 import CitiesCard from "./CitiesCard";
 import "./Cities.css";
 

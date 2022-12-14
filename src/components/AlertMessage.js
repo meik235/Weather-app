@@ -1,5 +1,5 @@
 import React from "react";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import "./AlertMessage.css";
 
 const AlertMessage = ({ text }) => {

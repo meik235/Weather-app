@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ClearIcon from "@material-ui/icons/Clear";
-import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import ClearIcon from "@mui/icons-material/Clear";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import axios from "axios";
 import AlertMessage from "./AlertMessage";
 import "./AddCityModal.css";
