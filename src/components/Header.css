@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 0.99;
+  padding: 10px;
+}
+
+.header__title {
+  font-size: x-large;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.header__button {
+  background-color: rgb(130, 84, 173);
+  color: white;
+  border: none;
+  height: 38px;
+  width: 140px;
+  font-size: medium;
+}
+
+.header__button:hover {
+  cursor: pointer;
+  background-color: rgb(253, 186, 62);
+  color: rgb(141, 115, 170);
+}

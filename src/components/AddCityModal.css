@@ -1,0 +1,126 @@
+.darkBG {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  width: 420px;
+  padding-bottom: 0.5rem;
+  background: white;
+  z-index: 10;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.modal > input {
+  margin: 1rem 4.5rem;
+  height: 5vh;
+  width: 20vw;
+  border: 1px solid grey;
+  color: rgb(65, 64, 64);
+}
+
+.modal > input:focus {
+  border: 1px solid blue;
+}
+
+.modal > hr {
+  border-top: 1px solid #c5c5c5;
+}
+
+.modal > input::placeholder {
+  padding: 0.5rem;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: rgb(253, 186, 62);
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.heading {
+  margin: 0;
+  padding: 1.3rem;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+
+.modal__container {
+  overflow: auto;
+  max-height: 230px;
+  scroll-snap-type: none;
+}
+
+.modalContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.6rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 14px;
+  color: rgb(24, 24, 24);
+  text-align: center;
+  border: 1px solid rgb(201, 201, 201);
+}
+
+.modalActions {
+  position: absolute;
+  bottom: 2px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.closeBtn {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 1rem 1rem;
+  border: none;
+  font-size: 18px;
+  color: #2c3e50;
+  position: absolute;
+  right: 0;
+  top: 0;
+  align-self: flex-end;
+}
+
+.closeBtn:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.deleteBtn {
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 11px 28px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: none;
+  color: #fff;
+  background: #ff3e4e;
+  transition: all 0.25s ease;
+}

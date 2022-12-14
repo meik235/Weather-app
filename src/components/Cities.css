@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+}
+
+.cities {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 90vh;
+  width: 27vw;
+  margin: 1.5rem;
+  border-radius: 3px;
+}
+
+.cities:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cities__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cities__header > h3 {
+  padding: 1rem;
+  font-weight: 400;
+}
+
+.cities__btn {
+  padding-right: 1rem;
+}
+
+.cities > p {
+  padding: 1rem;
+  font-size: medium;
+  font-weight: 300;
+}
+
+.cities__body {
+  margin-top: 0.7rem;
+  padding: 6px 6px 0px 6px;
+  border: 0.5px solid rgb(206, 206, 206);
+}
+
+.cities__body > p {
+  font-weight: 300;
+  font-size: small;
+  padding-bottom: 6px;
+}
+
+.cities__body:hover {
+  background-color: rgb(231, 231, 231);
+  border: none;
+}

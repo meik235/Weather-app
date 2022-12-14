@@ -1,0 +1,29 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.07;
+  height: 100vh;
+  background-color: rgb(130, 84, 173);
+}
+
+.sidebar__title {
+  display: flex;
+  height: 55px;
+}
+
+.sidebar__navlink {
+  padding-top: 23px;
+  padding-left: 23px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.active {
+  background-color: rgb(253, 186, 62);
+  color: rgb(120, 73, 163);
+}
+
+.inactive {
+  background-color: rgb(130, 84, 173);
+  color: rgb(211, 201, 221);
+}

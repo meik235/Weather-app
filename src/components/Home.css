@@ -1,0 +1,55 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home > p {
+  padding: 10px 5px 5px 20px;
+  font-size: medium;
+  font-weight: 300;
+}
+
+.home__container {
+  display: flex;
+  margin-left: 1.5rem;
+}
+
+.favorite__city__container {
+  margin: 0.5rem;
+  padding: 1rem;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
+  width: 16vw;
+}
+
+.favorite__city__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+.favorite__city__header > .MuiSvgIcon-root {
+  color: rgb(255, 213, 97);
+}
+
+.favorite__city {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.favorite__city > h4 {
+  color: green;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+.favorite__city > p {
+  padding-bottom: 0.5rem;
+}
+
+.favorite__city > p > b {
+  color: rgb(44, 44, 44);
+}

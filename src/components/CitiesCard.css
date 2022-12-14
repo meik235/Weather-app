@@ -1,0 +1,53 @@
+.city__details {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 90vh;
+  width: 58vw;
+  margin: 1.5rem;
+  border-radius: 3px;
+}
+
+.cities__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cities__header > h3 {
+  padding: 1rem;
+  font-weight: 400;
+}
+
+.cities__btn > .MuiSvgIcon-root {
+  padding-right: 1rem;
+}
+
+.favorite > .MuiSvgIcon-root {
+  color: rgb(255, 213, 97);
+}
+
+.city__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  font-size: small;
+  margin: auto;
+  height: 35%;
+}
+
+.city__card > h4 {
+  color: green;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+.city__card > p {
+  padding-bottom: 0.5rem;
+}
+
+.city__card > p > b {
+  color: rgb(44, 44, 44);
+}
