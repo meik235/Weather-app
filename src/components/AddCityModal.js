@@ -14,16 +14,16 @@ const AddCityModal = ({ closeHandler, addNewCity }) => {
     onload(search);
   }, [search]);
 
-  const onload = async (searchonload) => {
+  const onload = async (search) => {
     const result = await axios.get("http://localhost:3003/cities-data");
-    if (searchonload === "") {
+    if (search === "") {
       setCities(result.data);
     } else {
       setCities(
         result.data.filter(
           (city) =>
-            city.name.toLowerCase().includes(searchonload) ||
-            city.name.includes(searchonload)
+            city.name.toLowerCase().includes(search) ||
+            city.name.includes(search)
         )
       );
     }
@@ -42,7 +42,7 @@ const AddCityModal = ({ closeHandler, addNewCity }) => {
         setAlertVisible(true);
         setTimeout(() => setAlertVisible(false), 1000);
         addNewCity();
-        onload();
+        onload(search);
       })
       .catch((error) => console.log(error));
   };
