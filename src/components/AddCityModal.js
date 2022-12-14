@@ -32,10 +32,10 @@ const AddCityModal = ({ closeHandler }) => {
   };
 
   const cityDetailsHandler = async (city) => {
-    await axios.post("http://localhost:3003/new-city", city);
     axios
       .patch(`http://localhost:3003/cities-data/${city.id}`, {
         isVisible: false,
+        isMyCity: true,
       })
       .then(() => {
         alert("City Added");

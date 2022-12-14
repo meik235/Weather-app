@@ -20,8 +20,10 @@ const Cities = () => {
   }, []);
 
   const onload = async () => {
-    const result = await axios.get("http://localhost:3003/new-city");
-    setCityDetails(result.data);
+    const result = await axios.get("http://localhost:3003/cities-data");
+    const list = [];
+    result.data.filter((iscity) => (iscity.isMyCity ? list.push(iscity) : ""));
+    setCityDetails(list);
   };
 
   const visibleCityHandler = (id) => {

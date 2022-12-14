@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import GradeIcon from "@material-ui/icons/Grade";
+import StarIcon from "@material-ui/icons/Star";
 import axios from "axios";
 import "./CitiesCard.css";
 
@@ -13,7 +13,7 @@ const CitiesCard = ({ id }) => {
 
   const onload = () => {
     axios
-      .get(`http://localhost:3003/new-city/${id}`)
+      .get(`http://localhost:3003/cities-data/${id}`)
       .then((response) => {
         setCityInfo(response.data);
       })
@@ -21,12 +21,11 @@ const CitiesCard = ({ id }) => {
   };
 
   const addFavoriteHandler = async (city) => {
-    !isFavorite ? setIsFavorite(true) : setIsFavorite(false);
+    isFavorite ? setIsFavorite(true) : setIsFavorite(false);
     await favoriteHandler(city);
   };
 
   const favoriteHandler = async (data) => {
-    console.log(isFavorite);
     !isFavorite
       ? await axios.patch(`http://localhost:3003/cities-data/${data.id}`, {
           isFavorite: true,
@@ -45,7 +44,7 @@ const CitiesCard = ({ id }) => {
         }
       >
         <h3>{cityInfo.name}</h3>
-        <GradeIcon
+        <StarIcon
           className="cities__btn"
           onClick={() => addFavoriteHandler(cityInfo)}
         />

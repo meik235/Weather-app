@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import GradeIcon from "@material-ui/icons/Grade";
+import StarIcon from "@material-ui/icons/Star";
 import Header from "./Header";
 import axios from "axios";
 import "./Home.css";
@@ -42,7 +42,7 @@ const Home = () => {
               <div className="favorite__city__header">
                 <>
                   {city.name}
-                  <GradeIcon onClick={() => removeFavorite(city.id)} />
+                  <StarIcon onClick={() => removeFavorite(city.id)} />
                 </>
               </div>
               <div className="favorite__city">
