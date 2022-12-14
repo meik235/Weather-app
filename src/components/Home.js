@@ -13,9 +13,11 @@ const Home = () => {
 
   const onload = async () => {
     const result = await axios.get("http://localhost:3003/cities-data");
+    const list = [];
     result.data.filter((favcity) =>
-      favcity.isFavorite ? setFavoriteCity(result.data) : ""
+      favcity.isFavorite ? list.push(favcity) : ""
     );
+    setFavoriteCity(list);
   };
 
   const removeFavorite = async (id) => {

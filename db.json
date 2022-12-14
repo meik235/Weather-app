@@ -24,7 +24,7 @@
       "desc": "Clear with periodic clouds",
       "temp": "20 °C",
       "humidity": "52.0%",
-      "isFavorite": false,
+      "isFavorite": true,
       "isMyCity": true
     },
     {
@@ -51,7 +51,7 @@
       "desc": "Clear with periodic clouds",
       "temp": "20 °C",
       "humidity": "52.0%",
-      "isFavorite": true,
+      "isFavorite": false,
       "isMyCity": true
     },
     {
