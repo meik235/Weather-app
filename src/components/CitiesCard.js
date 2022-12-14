@@ -8,12 +8,12 @@ const CitiesCard = ({ id }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
-    onload();
+    onload(id);
   }, [id]);
 
-  const onload = () => {
+  const onload = (idonload) => {
     axios
-      .get(`http://localhost:3003/cities-data/${id}`)
+      .get(`http://localhost:3003/cities-data/${idonload}`)
       .then((response) => {
         setCityInfo(response.data);
       })

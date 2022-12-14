@@ -11,19 +11,19 @@ const AddCityModal = ({ closeHandler, addNewCity }) => {
   const [alertVisible, setAlertVisible] = useState(false);
 
   useEffect(() => {
-    onload();
+    onload(search);
   }, [search]);
 
-  const onload = async () => {
+  const onload = async (searchonload) => {
     const result = await axios.get("http://localhost:3003/cities-data");
-    if (search === "") {
+    if (searchonload === "") {
       setCities(result.data);
     } else {
       setCities(
         result.data.filter(
           (city) =>
-            city.name.toLowerCase().includes(search) ||
-            city.name.includes(search)
+            city.name.toLowerCase().includes(searchonload) ||
+            city.name.includes(searchonload)
         )
       );
     }
